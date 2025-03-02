@@ -10,10 +10,24 @@
         <tr id="itemTableHeaderRow">
             <th>Item name</th>
             <th id="itemTableHeaderAmountCell"></th>
+            <th>Price</th>
         </tr>
     </table><br>
 
-    <button onclick="itemAddForm()">Press to add item to store</button>
+    <button id="newStorageItemButton" onclick="itemAddForm()">Press to add item to store</button>
+    <br>
+    <form id="newStorageItemForm" style="visibility: hidden;">
+        <label for="newNameInput">Item Name</label>
+        <input type="text" id="newNameInput">
+
+        <label for="newAmountInput">Item's amount in stock</label>
+        <input type="text" id="newAmountInput">
+
+        <label for="newPriceInput">Item's price</label>
+        <input type="text" id="newPriceInput">
+
+        <button type="submit">Add items</button>
+    </form>
 
 
 

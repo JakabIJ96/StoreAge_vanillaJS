@@ -20,7 +20,6 @@ loadConstants();
 loadUpTableWithElements();
 
 
-
 function loadConstants()
 {
     document.getElementById("itemTableHeaderAmountCell").innerText = AmountColumnName;
@@ -58,7 +57,6 @@ function addNewStoreItemToTable(event) {
     let amountValue = document.getElementById("newAmountInput").value;
     let priceValue = document.getElementById("newPriceInput").value;
 
-
     if (!nameValue.trim() || !amountValue.trim() || !priceValue.trim()) {
         alert("Please fill both fields!");
         return;
@@ -92,14 +90,15 @@ function addNewStoreItemToTable(event) {
 
     let newValuesForm = document.getElementById("newStorageItemForm");
 
-    newValuesForm.setAttribute("style", "visibility: hidden;")
-    document.getElementById("newStorageItemButton").setAttribute("style", "visibility: visible;")
+    newValuesForm.setAttribute("style", "visibility: hidden;");
+    document.getElementById("newStorageItemButton").setAttribute("style", "visibility: visible;");
 }
+
 
 function itemAddForm() {
     console.log("Item add form clicked");
 
-    document.getElementById("newStorageItemButton").setAttribute("style", "visibility: hidden;")
+    document.getElementById("newStorageItemButton").setAttribute("style", "visibility: hidden;");
 
     let newForm = document.getElementById("newStorageItemForm");
     newForm.setAttribute("style", "visibility: visible;")
@@ -164,4 +163,3 @@ function editRow(tableRowId) {
         count += 1;
     }
 }
-

@@ -1,16 +1,50 @@
 table{
     border: solid;
+    border-collapse: collapse;
 }
 
 tr{
     border:solid;
 }
 
-th, td{
+tr:nth-child(odd){
+    background-color: rgb(197, 197, 197);
+}
+
+th{
+    padding: 5px;
+    border: solid;
+    background-color: white;
+}
+
+td{
     padding: 5px;
     border: solid;
 }
 
-input, label{
+input{
     display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+label{
+    display: block;
+    text-align: center;
+}
+
+form#newStorageItemForm{
+    width: 20%;
+    border: solid 4px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1% 1% 0% 1%;
+}
+
+#newStoreItemButton{
+    margin-top: 10%;
 }

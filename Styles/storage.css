@@ -1,16 +1,86 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url("../Images/polos.jpg");
+    background-position: 50%;
+    background-repeat: repeat-y;
+}
+
 table{
     border: solid;
+    border-collapse: collapse;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 tr{
     border:solid;
 }
 
-th, td{
+tr:nth-child(odd){
+    background-color: rgb(197, 197, 197);
+}
+
+th{
+    padding: 5px;
+    border: solid;
+    background-color: white;
+}
+
+td{
     padding: 5px;
     border: solid;
 }
 
-input, label{
+input{
     display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+label{
+    display: block;
+    text-align: center;
+}
+
+form#newStorageItemForm{
+    width: 20%;
+    border: solid 4px;
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1% 1% 0% 1%;
+    visibility: hidden;
+}
+
+/* form#newStorageItemForm:focus-within{
+    animation: bubbleItem 1.5s forwards;
+    //animation-name: bubbleItem;
+    //animation-duration: 3.5s;
+    //animation-fill-mode: forwards;
+} */
+
+#newStorageItemAddFormButton{
+    width: 30%;
+    align-self: center;
+}
+
+#newStoreItemButton{
+    margin-top: 10%;
+}
+
+/* form#newStorageItemForm.show{
+    visibility: visible;
+} */
+
+@keyframes bubbleItem {
+    0%{
+        transform: scale(0.1) rotate(0deg);
+    }
+    100%{
+        transform: scale(1.5) rotate(360deg);
+    }
 }
